@@ -14,7 +14,7 @@ class MyCustomAdapter extends ArrayAdapter<String> {
 	private Typeface typeface = Typeface.createFromAsset(getContext()
 			.getAssets(), "regular.ttf");
 
-	public MyCustomAdapter(Context context, int resource, List<String> objects) {
+	public MyCustomAdapter(Context context, int resource, String[] objects) {
 		super(context, resource, objects);
 		this.resourceId = resource;
 	}

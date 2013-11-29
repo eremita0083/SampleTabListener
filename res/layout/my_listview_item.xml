@@ -3,22 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="80dp"
     android:background="#ffffff"
+    android:padding="8dp"
     >
     <CheckBox 
         android:id="@+id/cb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
-    
+        android:layout_centerVertical="true"/>
     
     <TextView 
-        android:id="@+id/text_drawer_lv"
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:textColor="#111111"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="text"/>
-    
-
+   
 </RelativeLayout>

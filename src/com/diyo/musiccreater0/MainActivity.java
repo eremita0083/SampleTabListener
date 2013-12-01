@@ -1,5 +1,6 @@
 package com.diyo.musiccreater0;
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.ActionBar.TabListener;
@@ -8,6 +9,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
+@SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity {
 	private Fragment m0Fragment, m1Fragment, m2Fragment, m3Fragment,
 			m4Fragment, m5Fragment;
@@ -30,14 +32,14 @@ public class MainActivity extends ActionBarActivity {
 			@Override
 			public void onTabSelected(Tab tab, FragmentTransaction ft) {
 				if (tab.getText().equals("受講者一覧")) {
-					//if (m0Fragment == null) {
+					if (m0Fragment == null) {
 						m0Fragment = Tab0Fragment.instantiate(
 								getApplicationContext(),
 								Tab0Fragment.class.getName());
 						ft.add(android.R.id.content, m0Fragment, "受講者一覧");
-				//	} else {
-				//		ft.attach(m0Fragment);
-				//	}
+					} else {
+						ft.attach(m0Fragment);
+					}
 				} else if (tab.getText().equals("Group1")) {
 					if (m1Fragment == null) {
 						m1Fragment = Tab1Fragment.instantiate(
